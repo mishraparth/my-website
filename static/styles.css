@@ -187,3 +187,139 @@ canvas {
     height: 100vh;
     z-index: -1; /* Keeps it behind the hero text */
 }
+
+
+.section-title {
+    font-size: 36px; /* Make it larger */
+    font-weight: bold;
+    color: hsl(63, 100%, 50%); /* Futuristic neon color */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+body {
+    background-color: #000; /* Pure black background */
+    color: #ffffff; /* White text for high contrast */
+}
+
+/* Ensure section and subsection titles stand out */
+.section-title {
+    color: #00ffff; /* Futuristic cyan glow */
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.subsection-title {
+    color: #ff00ff; /* Neon purple glow */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Adjust hero section for better visibility */
+.hero-title {
+    color: #ffffff; /* Bright white for readability */
+    text-shadow: 0 0 20px #00ffff; /* Neon glow effect */
+}
+
+
+/* now i am adding some more UI designs */
+/* UI design */
+
+body {
+    font-size: 20px;  /* Slightly larger default font */
+    line-height: 1.6; /* Improve readability */
+    background-color: #000; /* Black background */
+    color: #ffffff; /* White text */
+}
+
+.section-title {
+    color: #00ffff; /* Futuristic cyan glow */
+    font-size: 40px; /* Bigger for visibility */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #00ffff;
+}
+
+.subsection-title {
+    color: #ff00ff; /* Neon purple */
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px #ff00ff;
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%; /* Increase width on smaller screens */
+        padding: 15px; /* Adjust spacing */
+    }
+
+    .hero-title {
+        font-size: 36px; /* Slightly smaller for mobile */
+    }
+
+    .btn {
+        font-size: 20px; /* Adjust button size */
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.skill-category {
+    background: rgba(0, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-category:hover {
+    transform: scale(1.05);
+    background: rgba(255, 0, 255, 0.3);
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+.section-title {
+    font-size: 40px;
+    color: #00ffff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #00ffff;
+}
