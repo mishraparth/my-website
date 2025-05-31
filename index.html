@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="static/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <header>
@@ -14,36 +15,37 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="https://www.linkedin.com/in/parth-mishra-b2b64a28a" target="_blank" class="contact-link">LinkedIn</a></li>
+                    <li><a href="https://github.com/mishraparth" target="_blank" class="contact-link">Github</a></li>
                     <li><a href="static/resume.pdf" target="_blank" class="contact-link">Resume</a></li>
                 </ul>
             </div>
         </nav>
         <div class="hero">
-            <div class="container">
-                <h1 class="hero-title">Welcome to My Portfolio</h1>
-                <p id="dynamicText"></p>
-                <a href="#details" class="btn">Learn More</a>
-            </div>
-        </div>
+    <canvas id="threeCanvas"></canvas>
+    <div class="container">
+        <h1 class="hero-title">Welcome to My Portfolio</h1>
+        <p id="dynamicText"></p>
+        <a href="#details" class="btn">Learn More</a>
+    </div>
+</div>
     </header>
     <section class="details" id="details">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <p>A passionate tech enthusiast with a love for technology since the age of 10. With comprehensive skills in Python, Java, C, SQL, AI, cloud computing, and an in-depth understanding of web and computer networks, I am keen to bring my knowledge and enthusiasm in the field of AI Where i can grow and contribute to innovative projects. I am skilled in developing, training , and deploying machine learning models to solve real world problems . I have excellent analytical and problem-solving abilities, with a strong focus on continuous learning and improvement .</p>
+            <p>I am Parth Mishra, a passionate tech enthusiast with a love for technology since the age of 10. With comprehensive skills in Python, Java, C, SQL, AI, cloud computing, and an in-depth understanding of web and computer networks, I am keen to bring my knowledge and enthusiasm in the field of IT Where i can grow and contribute to innovative projects. I am skilled in developing, training , and deploying machine learning models to solve real world problems . I have excellent analytical and problem-solving abilities, with a strong focus on continuous learning and improvement .</p>
 
             <h2 class="section-title">Education</h2>
             <p><strong>Bachelor of Technology in Computer Science and Engineering</strong><br>
             Faculty of Engineering and Technology Gurukula Kangri (Deemed to be University), Haridwar, India<br>
             Expected B.Tech: June 2026</p>
-            <p><strong>Key Courses:</strong> Data Structures and Algorithms, Operating Systems, Database Management Systems, Network Security, Artificial Intelligence</p>
+            <p><strong>Key Courses:</strong> Machine Learning , Data Structures and Algorithms, Operating Systems, Database Management Systems, Network Security, Artificial Intelligence</p>
 
             <h2 class="section-title">Skills</h2>
             <h3 class="subsection-title">Programming Languages:</h3>
-            <p> Python, Java, C<br>
-            HTML, CSS, JavaScript</p>
+            <p>  Python, Java, C,JavaScript, R</p>
 
             <h3 class="subsection-title">Data Analysis & Machine Learning:</h3>
-            <p><strong>Tools:</strong> NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow, PyTorch<br>
+            <p><strong>Tools:</strong> NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Keras,  PyTorch<br>
             <strong>Techniques:</strong> Exploratory Data Analysis, Regression, Classification, Clustering, Deep Learning, Neural Networks, Natural Language Processing, Computer Vision<br>
             <strong>Visualization:</strong> Crafting interactive and insightful visualizations with Matplotlib and Seaborn</p>
 
@@ -60,7 +62,16 @@
             <h2 class="section-title">Projects</h2>
             <h3 class="subsection-title">Property Price Prediction Model</h3>
             <p>This project involves developing a machine learning model to predict property prices based on various features such as location, property type, size, and amenities. The model is built using Python and scikit-learn, and it leverages techniques such as regression analysis. The project demonstrates my ability to handle complex datasets, perform feature engineering, and build predictive models.</p>
-            <a href="https://github.com/mishraparth" class="btn btn-project">View my Projects on github</a>
+            <a href="https://bangalore-house-price-predictor-tblt.onrender.com/" class="btn btn-project">View bangalore house price predictor</a>
+
+            <h3 class="subsection-title">Current-Weather</h3>
+            <p>This project involves developing a web app using REST API to get the information about the temperature of various different cities  across the world.</p>
+            <a href="https://deft-cactus-b6f21f.netlify.app/" class="btn btn-project">Current-Weather-Forecast-Web-app</a>
+            
+            <h3 class="subsection-title">3D-Globe</h3>
+            <p>This project involves developing a 3d globe using three js .</p>
+            <a href="https://mishraparth.github.io/3d-globe/" class="btn btn-project">3D-globe</a>
+            
 
 
         </div>
