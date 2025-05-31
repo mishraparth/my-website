@@ -1,245 +1,189 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #07a0e2;
+    color: #ffffff;  /* Soft white for better readability */
 }
-
-header {
-    background-color: #007BFF;
-    color: white;
+body {
+    text-align: center;
 }
-
+/* Navigation Bar */
 nav {
-    background-color: #0056b3;
-    padding: 10px 0;
+    background: rgba(60, 117, 63, 0.361);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 
-nav .logo {
-    font-size: 24px;
+.logo {
+    font-size: 28px;
+    color: #00ffff;
     font-weight: bold;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-    position: relative;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s;
+    color: #00ffff;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #FFD700;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
 }
 
+/* Hero Section */
 .hero {
-    text-align: center;
-    padding: 50px 0;
-    background: #fff;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.hero .btn {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.hero .btn:hover {
-    background-color: #0056b3;
-}
-
-#dynamicText {
-    color: #333; /* Dark color for visibility */
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.main {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.property-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.property-form .form-group {
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-}
-
-.property-form .form-group label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.property-form .form-group input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.property-form .form-group input:focus {
-    border-color: #007BFF;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
-}
-
-.property-form .btn {
-    grid-column: span 2;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.property-form .btn:hover {
-    background-color: #0056b3;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
-}
-
-.prediction {
-    margin-top: 20px;
-    font-size: 24px;
-    color: #333;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    color: #FFD700;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-section.details .container {
-    margin-left: 40px; /* Adjust this value as needed */
-}
-
-/* Add this to your existing .btn styles if not present */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Add specific styles for the "View Project" button */
-.btn-project {
-    background-color: #ff9800; /* Change background color */
-    border: 2px solid #ff9800; /* Add border */
-    color: white; /* Text color */
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 1px; /* Letter spacing */
-}
-
-.btn-project:hover {
-    background-color: #e68900; /* Change hover background color */
-    border: 2px solid #e68900; /* Change hover border color */
-    color: #fff; /* Hover text color */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
-    transform: translateY(-2px); /* Add hover transform */
-}
-
-.btn-project:active {
-    background-color: #cc7700; /* Change active background color */
-    border: 2px solid #cc7700; /* Change active border color */
-    transform: translateY(2px); /* Add active transform */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add active shadow */
+    background: url('') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .hero-title {
-    color: #007BFF; /* Change the text color */
-    font-size: 48px; /* Increase the font size */
-    font-weight: bold; /* Make the text bold */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 2px; /* Letter spacing */
-    margin-bottom: 20px; /* Adjust the margin */
+    font-size: 40px;
+    color: #00ffff;
+    animation: neon-glow 1.5s infinite alternate;
 }
 
-.section-title {
-    color: #007BFF; /* Set a primary color */
-    font-size: 32px; /* Set font size */
-    font-weight: bold; /* Make the text bold */
-    text-transform: uppercase; /* Uppercase text */
-    border-bottom: 2px solid #007BFF; /* Add an underline effect */
-    padding-bottom: 10px; /* Add some padding below */
-    margin-bottom: 20px; /* Add some margin below */
-    text-align: center; /* Center align the text */
+@keyframes neon-glow {
+    0% { text-shadow: 0 0 10px #00ffff; }
+    100% { text-shadow: 0 0 20px #ff00ff; }
 }
 
-.subsection-title {
-    color: #333; /* Set a darker color */
-    font-size: 24px; /* Set font size */
-    font-weight: bold; /* Make the text bold */
-    text-transform: uppercase; /* Uppercase text */
-    margin-bottom: 10px; /* Add some margin below */
+/* Skill Cards */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 50px;
 }
 
+.skill-card {
+    background: rgb(21, 198, 237);
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    backdrop-filter: blur(15px);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
+.skill-card:hover {
+    transform: scale(1.1);
+    background: rgba(255, 0, 255, 0.3);
+    box-shadow: 0 0 15px #ff00ff;
+}
 
+/* Magical Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px #ff00ff;
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    background: rgb(22, 186, 250);
+    padding: 50px;
+    text-align: center;
+    border-top: 2px solid #00ffff;
+}
+
+#contact h2 {
+    font-size: 30px;
+    color: #00ffff;
+}
+
+#contact p {
+    font-size: 22px;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 255, 255, 0.15);
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #00ffff;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 85%;  /* Limits the width to 85% of the screen */
+    margin: auto;   /* Centers the content */
+    padding: 20px;  /* Adds breathing room inside */
+}
+
+body {
+    font-size: 22px; /* Increase default font size */
+}
+
+.hero-title {
+    font-size: 48px; /* Make the hero title larger */
+}
+
+nav ul li a {
+    font-size: 24px; /* Increase menu font size */
+}
+
+.skill-card {
+    font-size: 26px; /* Make skill card text bigger */
+}
+
+#contact h2 {
+    font-size: 32px; /* Enlarge contact section headers */
+}
+
+#contact p {
+    font-size: 24px; /* Make contact details more readable */
+}
+
+footer {
+    font-size: 20px; /* Increase footer text */
+}
+
+canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Keeps it behind the hero text */
+}
