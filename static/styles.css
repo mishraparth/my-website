@@ -323,3 +323,53 @@ body {
     text-transform: uppercase;
     text-shadow: 0 0 15px #00ffff;
 }
+
+.hero { margin-top: 60px; }
+
+.hero {
+  margin-top: 60px; /* Pushes hero below navbar */
+  padding: 40px 20px;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: url('your-image.jpg') no-repeat center center / cover;
+}
+
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 60px; /* Still needed on small screens */
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+
