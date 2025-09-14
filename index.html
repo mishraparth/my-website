@@ -1,125 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="static/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Orbitron&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parth Mishra | My Portfolio</title>
+  <link rel="stylesheet" href="static/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1 class="logo">My Portfolio</h1>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="https://www.linkedin.com/in/parth-mishra-b2b64a28a" target="_blank" class="contact-link">LinkedIn</a></li>
-                    <li><a href="https://github.com/mishraparth" target="_blank" class="contact-link">Github</a></li>
-                    <li><a href="static/resume.pdf" target="_blank" class="contact-link">Resume</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="hero">
-            
-    <canvas id="threeCanvas"></canvas>
-    <div class="container">
-        <h1 class="hero-title">Welcome to My Portfolio</h1>
-                    <p>I am Parth Mishra, a passionate tech enthusiast with a love for technology since the age of 10. With comprehensive skills in Python, Java, C, SQL , Data Science , AI, ML,  cloud computing, and an in-depth understanding of web and computer networks, I am keen to bring my knowledge and enthusiasm in the field of IT Where i can grow and contribute to innovative projects. I am skilled in developing, training , and deploying machine learning models to solve real world problems . I have excellent analytical and problem-solving abilities, with a strong focus on continuous learning and improvement .</p>
+  <div id="loading-screen">
+    <img src="static/loading.gif" alt="Loading..." class="loading-icon">
+  </div>
 
-        <p id="dynamicText"></p>
-        <a href="#details" class="btn">Learn More</a>
+  <audio autoplay loop>
+    <source src="static/neon-dreams.mp3" type="audio/mpeg">
+  </audio>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Parth Mishra</h1>
+      <ul class="nav-links">
+        <li><a href="https://www.linkedin.com/in/parth-mishra-b2b64a28a" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/mishraparth" target="_blank">GitHub</a></li>
+        <li><a href="static/resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <canvas id="threeCanvas"></canvas>
+      <div class="hero-content">
+        <h2 class="hero-title">Welcome to My Portfolio</h2>
+        <p class="hero-subtitle">Tech enthusiast | ML Developer | System Architect</p>
+        <a href="#projects" class="btn">Explore Projects</a>
+      </div>
     </div>
-</div>
-    </header>
-    <section class="details" id="details">
-        <div class="container">
-<div class="profile-wrapper">
-  <img src="parth.jpg" alt="Parth Mishra" class="profile-img">
-</div>
-       
-            <h2 class="section-title">Education</h2>
-            <p><strong>Bachelor of Technology in Computer Science and Engineering</strong><br>
-            Faculty of Engineering and Technology Gurukula Kangri (Deemed to be University), Haridwar, India<br>
-            Expected B.Tech: June 2026</p>
-            <p><strong>Key Courses:</strong> Machine Learning , Data Structures and Algorithms, Operating Systems, Database Management Systems, Network Security, Artificial Intelligence</p>
-     <section class="skills" id="skills">
-    <div class="container">
-        <h2 class="section-title">🚀 Skills & Expertise</h2>
+  </header>
 
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3 class="subsection-title">🖥 Programming Languages</h3>
-                <p>Python, Java, C, JavaScript, R</p>
-            </div>
+  <section class="profile-section">
+    <div class="profile-container">
+      <img src="assets/picofme2.png" alt="Parth Mishra" class="profile-img" />
+      <div class="profile-text">
+        <h2>About Me</h2>
+        <p>I am Parth Mishra, a passionate tech enthusiast with a love for technology since the age of 10. With comprehensive skills in Python, Java, C, SQL , Data Science , AI, ML,  cloud computing, and an in-depth understanding of web and computer networks, I am keen to bring my knowledge and enthusiasm in the field of IT Where i can grow and contribute to innovative projects. I am skilled in developing, training , and deploying machine learning models to solve real world problems . I have excellent analytical and problem-solving abilities, with a strong focus on continuous learning and improvement .</p>
 
-            <div class="skill-category">
-                <h3 class="subsection-title">📊 Data Science & ML</h3>
-                <p><strong>Tools:</strong> NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn, TensorFlow, Keras, PyTorch</p>
-                <p><strong>Techniques:</strong> Regression, Classification, Clustering, Deep Learning, NLP, Computer Vision</p>
-            </div>
-
-            <div class="skill-category">
-                <h3 class="subsection-title">🌐 Web Development</h3>
-                <p><strong>Frameworks:</strong> Flask, Django</p>
-                <p><strong>Databases:</strong> SQL (MySQL), MongoDB</p>
-            </div>
-
-            <div class="skill-category">
-                <h3 class="subsection-title">☁ Cloud Computing & Deployment</h3>
-                <p>AWS (EC2, S3, Lambda), Netlify, Render</p>
-            </div>
-
-            <div class="skill-category">
-                <h3 class="subsection-title">🔐 API & Security</h3>
-                <p>REST APIs</p>
-            </div>
-
-            <div class="skill-category">
-                <h3 class="subsection-title">🔗 Distributed Computing & Networking</h3>
-                <p> Python Socket Programming</p>
-            </div>
-
-            <div class="skill-category">
-                <h3 class="subsection-title">🔧 Linux System Administration</h3>
-                <p>Server Configuration, Bash Scripting, CLI Management</p>
-            </div>
-        </div>
-    </div>
+      </div>
+      <section class="leetcode-section">
+  <h2>💻 LeetCode Stats</h2>
+  <a href="https://leetcode.com/mishraparth3" target="_blank">
+    <img src="https://leetcard.jacoblin.cool/mishraparth3?theme=dark&font=Orbitron" alt="LeetCode Stats">
+  </a>
 </section>
+    </div>
+  </section>
 
-            <h2 class="section-title">Projects</h2>
-            <h3 class="subsection-title">Property Price Prediction Model</h3>
-            <p>This project involves developing a machine learning model to predict property prices based on various features such as location, property type, size, and amenities. The model is built using Python and scikit-learn, and it leverages techniques such as regression analysis. The project demonstrates my ability to handle complex datasets, perform feature engineering, and build predictive models.</p>
-            <a href="https://bangalore-house-price-predictor-tblt.onrender.com/" class="btn btn-project">View bangalore house price predictor</a>
-
-            <h3 class="subsection-title">Current-Weather</h3>
-            <p>This project involves developing a web app using REST API to get the information about the temperature of various different cities  across the world.</p>
-            <a href="https://deft-cactus-b6f21f.netlify.app/" class="btn btn-project">Current-Weather-Forecast-Web-app</a>
-            
-            <h3 class="subsection-title">Crop Recommendation Web App</h3>
-            <p>This project involves developing a Crop Recommendation Web App that predicts the best crop to grow using soil and climate data.
-              Powered by machine learning models trained on agricultural datasets.
-              Built with Flask, HTML/CSS, and deployed on Render..</p>
-            <a href="https://croprecomendation-ova6.onrender.com/" class="btn btn-project">Crop Recommendation Web App</a>
-            
-            <h3 class="subsection-title">Liver Disease Prediction Web App</h3>
-            <p>This project involves developing a Liver Disease Prediction Web App that analyzes patient health data to detect potential liver disorders.
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <div class="project">
+      <h3>Property Price Predictor</h3>
+      <p>Predicts real estate prices using regression models.</p>
+      <br>
+      <a href="https://bangalore-house-price-predictor-tblt.onrender.com/" class="btn">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Current Weather App</h3>
+      <p>Fetches real-time weather data using REST APIs.</p>
+      <br>
+      <a href="https://deft-cactus-b6f21f.netlify.app/" class="btn">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Crop Recommendation</h3>
+      <p>Suggests optimal crops based on soil and climate data.</p>
+      <br>
+      <a href="https://croprecomendation-ova6.onrender.com/" class="btn">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Liver Disease Prediction Web App</h3>
+      <p>This project involves developing a Liver Disease Prediction Web App that analyzes patient health data to detect potential liver disorders.
               Uses machine learning models like Logistic Regression and Random Forest for accurate classification.
               Built with Flask and deployed on Render, featuring a clean input form and user-friendly results.</p>
-            <a href="https://liverdiseasepredictor.onrender.com" class="btn btn-project">Liver Disease Prediction Web App</a>
-            
+              <br>
+      <a href="https://liverdiseasepredictor.onrender.com" class="btn">View Project</a>
+    </div>
+    
+  </section>
+
+  <div class="container">
+        <h2 class="section-title">🚀 Skills & Expertise</h2>
+  <section class="skills-grid">
+    <div class="aero-card">
+      <h3>🖥 Programming Languages</h3>
+      <p>Python, Java, C, JavaScript, R</p>
+    </div>
+    <div class="aero-card">
+      <h3>Data Science & ML</h3>
+      <p>NumPy, Pandas, TensorFlow, PyTorch, Keras,
+        Seaborn, Scikit-Learn
+      </p>
+    </div>
+    <div class="aero-card">
+      <h3>Web Development</h3>
+      <p>Flask, Django, SQL, MongoDB</p>
+    </div>
 
 
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 My Portfolio</p>
-            <p>Contact me at: <a href="mailto:mishraparth3@gmail.com">mishraparth3@gmail.com</a></p>
-        </div>
-    </footer>
-    <script src="static/scripts.js"></script>
+    <div class="aero-card">
+      <h3> Cloud Computing & Deployment</h3>
+      <p>Amazon Web Services (AWS), Netlify , Render</p>
+    </div>
+
+    <div class="aero-card">
+      <h3> API & Security</h3>
+      <p>REST APIs</p>
+    </div>
+    
+    <div class="aero-card">
+      <h3> Distributed Computing & Networking</h3>
+      <p>Python Socket Programming</p>
+    </div>
+
+    <div class="aero-card">
+      <h3> Linux System Administration</h3>
+      <p>Server Configuration , Bash Scripting , CLI Management</p>
+    </div>
+
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Parth Mishra</p>
+    <p> <a href="mailto:mishraparth3@gmail.com">mishraparth3@gmail.com</a></p>
+  </footer>
+
+  <script src="static/scripts.js"></script>
 </body>
 </html>
