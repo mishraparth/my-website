@@ -1,375 +1,272 @@
-/* General Styling */
+/* Base styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    background-color: #07a0e2;
-    color: #ffffff;  /* Soft white for better readability */
-}
-body {
-    text-align: center;
-}
-/* Navigation Bar */
-nav {
-    background: rgba(60, 117, 63, 0.361);
-    backdrop-filter: blur(10px);
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  margin: 0;
+  font-family: 'Inter', 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #ff00cc, #3333ff);
+  color: #fff;
+  overflow-x: hidden;
 }
 
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Loading screen */
+#loading-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #00ffff, #ff00cc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-icon {
+  width: 100px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #fff;
 }
 
 .logo {
-    font-size: 28px;
-    color: #00ffff;
-    font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2rem;
+  color: #00ffff;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #00ffff;
-    font-size: 20px;
-    transition: 0.3s ease-in-out;
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #ff00ff;
-    text-shadow: 0 0 10px #ff00ff;
+.nav-links a:hover {
+  color: #00ffff;
 }
 
-/* Hero Section */
+/* Hero section */
 .hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: url('') no-repeat center center fixed;
-    background-size: cover;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+#threeCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 150px;
 }
 
 .hero-title {
-    font-size: 40px;
-    color: #00ffff;
-    animation: neon-glow 1.5s infinite alternate;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff00cc;
 }
 
-@keyframes neon-glow {
-    0% { text-shadow: 0 0 10px #00ffff; }
-    100% { text-shadow: 0 0 20px #ff00ff; }
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin: 1rem 0;
 }
 
-/* Skill Cards */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    padding: 50px;
-}
-
-.skill-card {
-    background: rgb(21, 198, 237);
-    padding: 25px;
-    border-radius: 15px;
-    width: 320px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    backdrop-filter: blur(15px);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.skill-card:hover {
-    transform: scale(1.1);
-    background: rgba(255, 0, 255, 0.3);
-    box-shadow: 0 0 15px #ff00ff;
-}
-
-/* Magical Buttons */
 .btn {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 12px;
-    background: linear-gradient(45deg, #00ffff, #ff00ff);
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px #ff00cc;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease;
 }
 
 .btn:hover {
-    box-shadow: 0 0 20px #ff00ff;
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-/* Contact Section */
-#contact {
-    background: rgb(22, 186, 250);
-    padding: 50px;
-    text-align: center;
-    border-top: 2px solid #00ffff;
+/* Profile section */
+.profile-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#contact h2 {
-    font-size: 30px;
-    color: #00ffff;
+.profile-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-#contact p {
-    font-size: 22px;
+.profile-img {
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.profile-text {
+  max-width: 500px;
+  color: #fff;
+}
+
+/* Sections */
+.section {
+  padding: 3rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+/* Projects */
+.project {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 2px dashed #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+/* Skill cards */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.aero-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.aero-card:hover {
+  transform: scale(1.05);
 }
 
 /* Footer */
 footer {
-    background: rgba(0, 255, 255, 0.15);
-    text-align: center;
-    padding: 25px;
-    border-top: 1px solid #00ffff;
-    font-size: 18px;
-}
-
-.container {
-    max-width: 85%;  /* Limits the width to 85% of the screen */
-    margin: auto;   /* Centers the content */
-    padding: 20px;  /* Adds breathing room inside */
-}
-
-body {
-    font-size: 22px; /* Increase default font size */
-}
-
-.hero-title {
-    font-size: 48px; /* Make the hero title larger */
-}
-
-nav ul li a {
-    font-size: 24px; /* Increase menu font size */
-}
-
-.skill-card {
-    font-size: 26px; /* Make skill card text bigger */
-}
-
-#contact h2 {
-    font-size: 32px; /* Enlarge contact section headers */
-}
-
-#contact p {
-    font-size: 24px; /* Make contact details more readable */
-}
-
-footer {
-    font-size: 20px; /* Increase footer text */
-}
-
-canvas {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100vh;
-    z-index: -1; /* Keeps it behind the hero text */
+  text-align: center;
+  padding: 2rem;
+  background-color: #000;
+  border-top: 2px solid #fff;
+  font-size: 0.9rem;
 }
 
 
-.section-title {
-    font-size: 36px; /* Make it larger */
-    font-weight: bold;
-    color: hsl(63, 100%, 50%); /* Futuristic neon color */
-    text-transform: uppercase;
-    text-align: center;
-}
 
 
-body {
-    background-color: #000; /* Pure black background */
-    color: #ffffff; /* White text for high contrast */
-}
 
-/* Ensure section and subsection titles stand out */
-.section-title {
-    color: #00ffff; /* Futuristic cyan glow */
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.subsection-title {
-    color: #ff00ff; /* Neon purple glow */
-    font-size: 28px;
-    font-weight: bold;
-}
-
-/* Adjust hero section for better visibility */
-.hero-title {
-    color: #ffffff; /* Bright white for readability */
-    text-shadow: 0 0 20px #00ffff; /* Neon glow effect */
-}
-
-
-/* now i am adding some more UI designs */
-/* UI design */
-
-body {
-    font-size: 20px;  /* Slightly larger default font */
-    line-height: 1.6; /* Improve readability */
-    background-color: #000; /* Black background */
-    color: #ffffff; /* White text */
-}
-
-.section-title {
-    color: #00ffff; /* Futuristic cyan glow */
-    font-size: 40px; /* Bigger for visibility */
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px #00ffff;
-}
-
-.subsection-title {
-    color: #ff00ff; /* Neon purple */
-    font-size: 32px;
-    font-weight: bold;
-    text-shadow: 0 0 10px #ff00ff;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 22px;
-    font-weight: bold;
-    border-radius: 12px;
-    background: linear-gradient(45deg, #00ffff, #ff00ff);
-    color: #fff;
-    text-decoration: none;
-    transition: 0.4s ease-in-out;
-}
-
-.btn:hover {
-    box-shadow: 0 0 20px #ff00ff;
-    transform: scale(1.05);
-    background: linear-gradient(45deg, #ff00ff, #00ffff);
-}
-
-
-.hero {
-    display: flex;
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px;
-}
-
-
-
-@media (max-width: 768px) {
-    .container {
-        max-width: 95%; /* Increase width on smaller screens */
-        padding: 15px; /* Adjust spacing */
-    }
-
-    .hero-title {
-        font-size: 36px; /* Slightly smaller for mobile */
-    }
-
-    .btn {
-        font-size: 20px; /* Adjust button size */
-    }
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px;
-    text-align: center;
-}
-
-.skill-category {
-    background: rgba(0, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.skill-category:hover {
-    transform: scale(1.05);
-    background: rgba(255, 0, 255, 0.3);
-    box-shadow: 0 0 20px #ff00ff;
-}
-
-.section-title {
-    font-size: 40px;
-    color: #00ffff;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px #00ffff;
-}
-
-.hero { margin-top: 60px; }
-
-.hero {
-  margin-top: 60px; /* Pushes hero below navbar */
-  padding: 40px 20px;
-  min-height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  background: url('your-image.jpg') no-repeat center center / cover;
-}
-
-
-.profile-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px auto;
-  max-width: 300px;
-  padding: 10px;
-}
-
-.profile-img {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-  .hero {
-    margin-top: 60px; /* Still needed on small screens */
-    padding-top: 80px;
-    text-align: center;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 0;
   }
 
-  .hero p {
+  .hero-content {
+    padding-top: 100px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
     font-size: 1rem;
   }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-img {
+    max-width: 150px;
+    width: 100%;
+  }
+
+  .profile-text {
+    padding: 1rem;
+  }
+
+  .leetcode-section img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .project {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aero-card {
+    width: 90%;
+    margin: 1rem 0;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
 }
-
-
